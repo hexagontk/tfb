@@ -1,4 +1,4 @@
-FROM ruby:3.5-rc
+FROM ruby:4.0
 
 ENV RUBY_YJIT_ENABLE=1
 
@@ -19,7 +19,7 @@ RUN bundle install --jobs=8
 
 COPY . .
 
-ENV MAX_THREADS=1
+ENV MAX_THREADS=5
 
 EXPOSE 8080
 
